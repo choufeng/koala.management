@@ -15,7 +15,6 @@ export default [
     Routes: ['src/pages/Authorized'],
     authority: ['admin', 'user'],
     routes: [
-      // dashboard
       {
         path: '/',
         name: 'home',
