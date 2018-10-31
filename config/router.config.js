@@ -1,4 +1,5 @@
 export default [
+  // user
   {
     path: '/user',
     component: '../layouts/UserLayout',
@@ -7,6 +8,7 @@ export default [
       { path: '/user/login', component: './User/Login' },
     ],
   },
+  // app
   {
     path: '/',
     component: '../layouts/BasicLayout',
