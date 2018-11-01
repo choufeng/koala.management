@@ -22,6 +22,33 @@ export default [
         component: './Dashboard/Index',
       },
       {
+        name: 'account',
+        icon: 'user',
+        path: '/account',
+        hideInMenu: true,
+        routes: [
+          {
+            path: '/account/settings',
+            name: 'settings',
+            component: './Account/Settings/Info',
+            routes: [
+              {
+                path: '/account/settings',
+                redirect: '/account/settings/base',
+              },
+              {
+                path: '/account/settings/base',
+                component: './Account/Settings/BaseView',
+              },
+              {
+                path: '/account/settings/security',
+                component: './Account/Settings/SecurityView',
+              },
+            ],
+          },
+        ],
+      },
+      {
         component: '404',
       },
     ],
