@@ -49,10 +49,16 @@ export default [
         ],
       },
       {
-        name: 'group',
+        name: 'admin',
         icon: 'usergroup-add',
-        path: '/group',
-        component: './Group/Groups'
+        path: '/admin',
+        routes: [
+          {
+            path: '/admin/group',
+            name: 'group',
+            component: './Group/Groups'
+          },
+        ]
       },
       {
         component: '404',

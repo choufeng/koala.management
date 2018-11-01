@@ -13,7 +13,6 @@ import {
   Popover,
 } from 'antd';
 import { connect } from 'dva';
-import FooterToolbar from '@/components/FooterToolbar';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import TableForm from './TableForm';
 import styles from './style.less';
@@ -24,21 +23,21 @@ const { RangePicker } = DatePicker;
 const tableData = [
   {
     key: '1',
-    workId: '00001',
-    name: 'John Brown',
-    department: 'New York No. 1 Lake Park',
+    name: 'Admin',
+    description: 'New York No. 1 Lake Park',
+    nodekeys: ['system.login', 'system.logout'],
   },
   {
     key: '2',
-    workId: '00002',
-    name: 'Jim Green',
-    department: 'London No. 1 Lake Park',
+    name: 'Users',
+    description: 'London No. 1 Lake Park',
+    nodekeys: ['system.login', 'system.logout'],
   },
   {
     key: '3',
-    workId: '00003',
-    name: 'Joe Black',
-    department: 'Sidney No. 1 Lake Park',
+    name: 'Editor',
+    description: 'Sidney No. 1 Lake Park',
+    nodekeys: ['system.login', 'system.logout'],
   },
 ];
 
@@ -46,7 +45,7 @@ const tableData = [
   submitting: loading.effects['form/submitAdvancedForm'],
 }))
 @Form.create()
-class AdvancedForm extends PureComponent {
+class Group extends PureComponent {
   state = {
     width: '100%',
   };
@@ -139,24 +138,18 @@ class AdvancedForm extends PureComponent {
 
     return (
       <PageHeaderWrapper
-        title="高级表单"
-        content="高级表单常见于一次性输入和提交大批量数据的场景。"
+        title="权限组管理"
+        content="在这里管理权限组，可为每个权限组设定不同的权限节点"
         wrapperClassName={styles.advancedForm}
       >
-        <Card title="成员管理" bordered={false}>
+        <Card title="权限组管理" bordered={false}>
           {getFieldDecorator('members', {
             initialValue: tableData,
           })(<TableForm />)}
         </Card>
-        <FooterToolbar style={{ width }}>
-          {this.getErrorInfo()}
-          <Button type="primary" onClick={this.validate} loading={submitting}>
-            提交
-          </Button>
-        </FooterToolbar>
       </PageHeaderWrapper>
     );
   }
 }
 
-e
+export default Group;
