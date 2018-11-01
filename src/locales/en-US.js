@@ -40,7 +40,7 @@ export default {
   'form.client.label': 'Client',
   'form.client.label.tooltip': 'Target service object',
   'form.client.placeholder':
-    'Please describe your customer service, internal customers directly @ Name / job number',
+  'Please describe your customer service, internal customers directly @ Name / job number',
   'form.invites.label': 'Inviting critics',
   'form.invites.placeholder': 'Please direct @ Name / job number, you can invite up to 5 people',
   'form.weight.label': 'Weight',
@@ -69,6 +69,7 @@ export default {
   'component.noticeIcon.cleared': 'Cleared',
   'component.noticeIcon.empty': 'No notifications',
   'menu.home': 'Home',
+  'menu.group': 'Groups',
   'menu.dashboard': 'Dashboard',
   'menu.dashboard.analysis': 'Analysis',
   'menu.dashboard.monitor': 'Monitor',

@@ -67,6 +67,7 @@ export default {
   'component.noticeIcon.cleared': '清空了',
   'component.noticeIcon.empty': '暂无数据',
   'menu.home': '首页',
+  'menu.group': '管理群组',
   'menu.dashboard': '控制台',
   'menu.dashboard.analysis': '分析页',
   'menu.dashboard.monitor': '监控页',

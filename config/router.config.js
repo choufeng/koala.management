@@ -49,6 +49,12 @@ export default [
         ],
       },
       {
+        name: 'group',
+        icon: 'usergroup-add',
+        path: '/group',
+        component: './Group/Groups'
+      },
+      {
         component: '404',
       },
     ],
